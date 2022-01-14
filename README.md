@@ -14,4 +14,8 @@ This repository will hold all the follow along exercises as well as the assignme
 ### Section 2 - The basics - Dom interaction with Vue
 
 ![Methods vs Computed vs Watch](./Assets/Screenshots/s2MethodsVsComputedVsWatch.png)  
-![Summary of section 2](Assets/Screenshots/s2Summary.png)
+![Summary of section 2](./Assets/Screenshots/s2Summary.png)
+
+### Section 3 - Conditional content and lists
+
+![Summary of section 3](./Assets/Screenshots/s3Summary.png)
