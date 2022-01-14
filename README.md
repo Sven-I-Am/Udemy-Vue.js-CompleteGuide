@@ -19,3 +19,8 @@ This repository will hold all the follow along exercises as well as the assignme
 ### Section 3 - Conditional content and lists
 
 ![Summary of section 3](./Assets/Screenshots/s3Summary.png)
+
+### Section 5 - Behind the scenes
+
+![Vue and Dom](./Assets/Screenshots/s5BtSVueandDom.png)  
+![lifecyclehooks](./Assets/Screenshots/s5BtSLifecycleHooks.png)
