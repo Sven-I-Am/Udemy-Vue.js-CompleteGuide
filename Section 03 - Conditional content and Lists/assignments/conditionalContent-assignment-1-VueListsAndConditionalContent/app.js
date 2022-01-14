@@ -6,14 +6,6 @@ const app = Vue.createApp({
       isVisible: true,
     };
   },
-  computed: {
-    setList() {
-      return {
-        visible: this.isVisible,
-        hidden: !this.isVisible,
-      };
-    },
-  },
   methods: {
     addTask() {
       this.tasks.push(this.input);
@@ -21,9 +13,6 @@ const app = Vue.createApp({
     },
     toggleList() {
       this.isVisible = !this.isVisible;
-    },
-    setButton() {
-      return this.isVisible ? 'Hide' : 'Show';
     },
   },
 });
