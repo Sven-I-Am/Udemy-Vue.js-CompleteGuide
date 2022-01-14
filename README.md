@@ -8,3 +8,10 @@ This repository will hold all the follow along exercises as well as the assignme
 |                                     |                                     |                                             |                               |
 | ----------------------------------- | ----------------------------------- | ------------------------------------------- | ----------------------------- |
 | ![Ubuntu](./Assets/ubuntu-logo.png) | ![vscode](./Assets/vscode-logo.png) | ![javascript](./Assets/javascript-logo.png) | ![Vue](./Assets/vue-logo.png) |
+
+## Summaries
+
+### Section 2 - The basics - Dom interaction with Vue
+
+![Methods vs Computed vs Watch](./Assets/Screenshots/s2MethodsVsComputedVsWatch.png)  
+![Summary of section 2](Assets/Screenshots/s2Summary.png)
