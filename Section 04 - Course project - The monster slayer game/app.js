@@ -89,6 +89,9 @@ const app = Vue.createApp({
       this.moves = [];
       this.winner = null;
     },
+    surrender() {
+      this.winner = 'monster';
+    },
   },
 });
 
