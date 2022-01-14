@@ -19,7 +19,10 @@
       <button @click="addGoal">Add Goal</button>
       <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul v-else>
-        <li v-for="(goal, index) in goals">{{ index+1}} - {{goal}}</li>
+        <li v-for="(goal, index) in goals" :key="goal" @click="removeGoal(index)">
+          <p>{{goal}}</p>
+          <input type="text" @click.stop />
+        </li>
       </ul>
     </section>
   </body>
