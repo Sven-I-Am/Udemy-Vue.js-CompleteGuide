@@ -42,7 +42,13 @@
       <section id="log" class="container">
         <h2>Battle Log</h2>
         <ul>
-          <li v-for="move in moves">{{ move.name }}: {{ move.move }} = {{ move.value }}</li>
+          <li v-for="move in moves">
+            <span :class="{'log--player': move.name==='Player', 'log--monster': move.name==='Monster'}"
+              >{{move.name === 'Player' ? 'Player ' : 'Monster '}}
+            </span>
+            <span v-if="move.move === 'Heal'">heals themselves for <span class="log--heal">{{ move.value}}</span></span>
+            <span v-else>attacks and deals <span class="log--damage">{{ move.value}}</span></span>
+          </li>
         </ul>
       </section>
     </div>
