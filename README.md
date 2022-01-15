@@ -28,3 +28,7 @@ This repository will hold all the follow along exercises as well as the assignme
 ### Section 8 - Component cummunication
 
 ![Summary of section 8](./Assets/Screenshots/s8Summary.png)
+
+### Section 9 - Component deep dive
+
+![Summary of section 9](./Assets/Screenshots/S9Summary.png)
