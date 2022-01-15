@@ -13,13 +13,13 @@
     <div class="row">
       <div class="col">
         <label for="phone">Phone</label>
-        <input type="text" id="phone" v-model="friend.phone" />
+        <input type="tel" id="phone" v-model="friend.phone" />
       </div>
     </div>
     <div class="row">
       <div class="col">
         <label for="email">Email</label>
-        <input type="text" id="email" v-model="friend.email" />
+        <input type="email" id="email" v-model="friend.email" />
       </div>
     </div>
     <div class="row">
@@ -47,27 +47,3 @@ export default {
   },
 };
 </script>
-<style>
-#app form {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 1rem auto;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  width: 90%;
-  max-width: 40rem;
-}
-.row {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 1rem auto;
-}
-.col {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0.5rem;
-}
-</style>
