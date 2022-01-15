@@ -1,11 +1,11 @@
 <template>
   <li>
-    <h2>{{ name }} {{ setFavorite ? "(Favorite)" : "" }}</h2>
+    <h2>{{ name }} {{ isFavorite ? "(Favorite)" : "" }}</h2>
     <button @click="toggleDetails">
       {{ isVisible ? "Hide" : "Show" }} Details
     </button>
     <button @click="toggleFavorite">
-      {{ setFavorite ? "Unset" : "Set" }} Favorite
+      {{ isFavorite ? "Unset" : "Set" }} Favorite
     </button>
     <ul v-if="isVisible">
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
@@ -33,7 +33,7 @@ export default {
       type: String,
       required: true,
     },
-    setFavorite: {
+    isFavorite: {
       type: Boolean,
       required: false,
       default: false,
