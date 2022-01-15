@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="saveFriend">
     <div class="row">
       <div class="col">
         <label for="firstName">First Name</label>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="row">
-      <button @click.prevent="saveFriend">Save</button>
+      <button>Save</button>
     </div>
   </form>
 </template>
@@ -43,6 +43,7 @@ export default {
   methods: {
     saveFriend() {
       this.$emit("save-friend", this.friend);
+      this.friend = {};
     },
   },
 };

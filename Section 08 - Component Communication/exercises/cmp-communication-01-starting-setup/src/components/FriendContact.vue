@@ -11,6 +11,7 @@
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
+    <button @click="deleteFriend">Delete</button>
   </li>
 </template>
 <script>
@@ -49,6 +50,14 @@ export default {
         return false;
       }
     },
+    "delete-friend": function (id) {
+      if (id) {
+        return true;
+      } else {
+        console.warning("missing id");
+        return false;
+      }
+    },
   },
   data() {
     return {
@@ -61,6 +70,9 @@ export default {
     },
     toggleFavorite() {
       this.$emit("toggle-favorite", this.id);
+    },
+    deleteFriend() {
+      this.$emit("delete-friend", this.id);
     },
   },
 };

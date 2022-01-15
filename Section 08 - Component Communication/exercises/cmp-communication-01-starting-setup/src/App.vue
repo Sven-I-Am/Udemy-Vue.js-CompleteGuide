@@ -10,6 +10,7 @@
         :key="friend.id"
         v-bind="friend"
         @toggle-favorite="toggleFavoriteStatus"
+        @delete-friend="deleteFriend"
       ></friend-contact>
     </ul>
   </section>
@@ -43,13 +44,17 @@ export default {
     },
     saveFriend(friend) {
       const newFriend = {
-        id: friend.firstName.toLowerCase(),
+        id: new Date().toISOString(),
         name: friend.firstName + " " + friend.lastName,
         phoneNumber: friend.phone,
         emailAddress: friend.email,
         isFavorite: false,
       };
       this.friends.push(newFriend);
+    },
+    deleteFriend(id) {
+      console.log("clicked delete");
+      this.friends = this.friends.filter((friend) => friend.id !== id);
     },
   },
 };
