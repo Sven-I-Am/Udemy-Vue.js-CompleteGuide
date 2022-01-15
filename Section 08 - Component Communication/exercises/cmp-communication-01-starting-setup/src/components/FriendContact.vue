@@ -1,5 +1,5 @@
 <template>
-  <li :key="id">
+  <li>
     <h2>{{ name }} {{ isFavorite ? "(Favorite)" : "" }}</h2>
     <button @click="toggleDetails">
       {{ isVisible ? "Hide" : "Show" }} Details
@@ -17,10 +17,6 @@
 export default {
   //   props: ["id", "name", "phoneNumber", "emailAddress"],
   props: {
-    id: {
-      type: Number,
-      required: true,
-    },
     name: {
       type: String,
       required: true,
@@ -34,12 +30,9 @@ export default {
       required: true,
     },
     setFavorite: {
-      type: String,
+      type: Boolean,
       required: false,
-      default: "0",
-      validator: function (value) {
-        return value === "1" || value === "0";
-      },
+      default: false,
     },
   },
   data() {
