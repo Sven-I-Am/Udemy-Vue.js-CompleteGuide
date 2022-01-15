@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  inject: ['topics'],
+  inject: ['topics'], //injected from App.vue
 };
 </script>

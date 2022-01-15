@@ -34,8 +34,8 @@ export default {
   },
   provide() {
     return {
-      topics: this.topics,
-      selectTopic: this.activateTopic,
+      topics: this.topics, //provide to KnowledgeGrid
+      selectTopic: this.activateTopic, //provide to KnowledgeElement
     };
   },
   methods: {

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  inject: ['selectTopic'],
+  inject: ['selectTopic'], //injectedt from App.vue
   props: ['id', 'topicName', 'description'],
   emits: ['select-topic'],
 };
