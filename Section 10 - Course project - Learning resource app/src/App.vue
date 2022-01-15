@@ -1,13 +1,6 @@
 <template>
   <the-header :title="title"></the-header>
-  <div id="btn-wrapper">
-    <base-button @click.prevent="setSelectedComponent('stored-resources')"
-      >Stored Resources</base-button
-    >
-    <base-button @click.prevent="setSelectedComponent('add-resources')"
-      >Add Resource</base-button
-    >
-  </div>
+  <the-resources></the-resources>
   <stored-resources
     :resources="storedResources"
     v-if="selectedComponent === 'stored-resources'"
@@ -19,17 +12,17 @@
 import StoredResources from './components/learningResources/StoredResources.vue';
 import AddResources from './components/learningResources/AddResources.vue';
 import TheHeader from './components/layouts/TheHeader.vue';
-import BaseButton from './components/UI/BaseButton.vue';
+import TheResources from './components/learningResources/TheResources.vue';
+
 export default {
   components: {
     StoredResources,
     AddResources,
     TheHeader,
-    BaseButton,
+    TheResources,
   },
   data() {
     return {
-      selectedComponent: 'stored-resources',
       title: 'RememberMe',
       storedResources: [
         {
@@ -46,11 +39,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    setSelectedComponent(cmp) {
-      this.selectedComponent = cmp;
-    },
   },
 };
 </script>
