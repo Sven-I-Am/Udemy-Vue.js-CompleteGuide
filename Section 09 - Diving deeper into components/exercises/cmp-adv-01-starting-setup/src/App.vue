@@ -1,10 +1,13 @@
 <template>
   <div>
     <TheHeader />
-    <button @click="setSelectedComponent('active')">Active Goals</button>
-    <button @click="setSelectedComponent('manage')">Manage Goals</button>
-    <ActiveGoals v-if="selectedComponent === 'active'" />
-    <ManageGoals v-if="selectedComponent === 'manage'" />
+    <button @click="setSelectedComponent('active-goals')">Active Goals</button>
+    <button @click="setSelectedComponent('manage-goals')">Manage Goals</button>
+    <!-- <ActiveGoals v-if="selectedComponent === 'active-goals'" /> -->
+    <!-- <ManageGoals v-if="selectedComponent === 'manage-goals'" /> -->
+    <keep-alive>
+      <component :is="selectedComponent"> </component>
+    </keep-alive>
   </div>
 </template>
 
@@ -21,7 +24,7 @@ export default {
   },
   data() {
     return {
-      selectedComponent: "active",
+      selectedComponent: "active-goals",
       activeUser: {
         name: "Maximilian Schwarzmüller",
         description: "Site owner and admin",
