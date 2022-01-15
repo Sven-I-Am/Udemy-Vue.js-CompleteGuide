@@ -24,3 +24,7 @@ This repository will hold all the follow along exercises as well as the assignme
 
 ![Vue and Dom](./Assets/Screenshots/s5BtSVueandDom.png)  
 ![lifecyclehooks](./Assets/Screenshots/s5BtSLifecycleHooks.png)
+
+### Section 8 - Component cummunication
+
+![Summary of section 8](./Assets/Screenshots/s8Summary.png)
