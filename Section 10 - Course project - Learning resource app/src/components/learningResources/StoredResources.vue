@@ -1,11 +1,13 @@
 <template>
-  <ul>
-    <learning-resource
-      v-for="res in resources"
-      :key="res.id"
-      :res="res"
-    ></learning-resource>
-  </ul>
+  <section>
+    <ul>
+      <learning-resource
+        v-for="res in resources"
+        :key="res.id"
+        :res="res"
+      ></learning-resource>
+    </ul>
+  </section>
 </template>
 
 <script>

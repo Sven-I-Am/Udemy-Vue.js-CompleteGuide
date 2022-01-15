@@ -1,8 +1,10 @@
 <template>
   <li>
     <base-card>
-      <h3>{{ res.title }}</h3>
-      <button>Delete</button>
+      <header>
+        <h3>{{ res.title }}</h3>
+        <base-button mode="flat">Delete</base-button>
+      </header>
       <p>{{ res.description }}</p>
       <nav>
         <a :href="res.link" target="_blank">View resource</a>

@@ -1,15 +1,36 @@
 <template>
-  <stored-resources :resources="storedResources"></stored-resources>
+  <the-header :title="title"></the-header>
+  <div id="btn-wrapper">
+    <base-button @click.prevent="setSelectedComponent('stored-resources')"
+      >Stored Resources</base-button
+    >
+    <base-button @click.prevent="setSelectedComponent('add-resources')"
+      >Add Resource</base-button
+    >
+  </div>
+  <stored-resources
+    :resources="storedResources"
+    v-if="selectedComponent === 'stored-resources'"
+  ></stored-resources>
+  <add-resources v-if="selectedComponent === 'add-resources'"></add-resources>
 </template>
 
 <script>
 import StoredResources from './components/learningResources/StoredResources.vue';
+import AddResources from './components/learningResources/AddResources.vue';
+import TheHeader from './components/layouts/TheHeader.vue';
+import BaseButton from './components/UI/BaseButton.vue';
 export default {
   components: {
     StoredResources,
+    AddResources,
+    TheHeader,
+    BaseButton,
   },
   data() {
     return {
+      selectedComponent: 'stored-resources',
+      title: 'RememberMe',
       storedResources: [
         {
           id: 'official-guide',
@@ -25,6 +46,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    setSelectedComponent(cmp) {
+      this.selectedComponent = cmp;
+    },
   },
 };
 </script>
@@ -42,5 +68,10 @@ html {
 
 body {
   margin: 0;
+}
+#btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 </style>
