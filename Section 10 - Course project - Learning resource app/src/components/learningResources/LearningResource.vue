@@ -2,12 +2,12 @@
   <li>
     <base-card>
       <header>
-        <h3>{{ res.title }}</h3>
-        <base-button mode="flat">Delete</base-button>
+        <h3>{{ title }}</h3>
+        <base-button mode="flat" @click="deleteResource(id)">Delete</base-button>
       </header>
-      <p>{{ res.description }}</p>
+      <p>{{ description }}</p>
       <nav>
-        <a :href="res.link" target="_blank">View resource</a>
+        <a :href="link" target="_blank">View Resource</a>
       </nav>
     </base-card>
   </li>
@@ -15,7 +15,8 @@
 
 <script>
 export default {
-  props: ['res'],
+  props: ['id', 'title', 'description', 'link'],
+  inject: ['deleteResource']
 };
 </script>
 

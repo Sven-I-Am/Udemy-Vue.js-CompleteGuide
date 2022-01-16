@@ -1,5 +1,5 @@
 <template>
-  <the-header :title="title"></the-header>
+  <the-header title="RememberMe"></the-header>
   <the-resources></the-resources>
 </template>
 
@@ -10,13 +10,8 @@ import TheResources from './components/learningResources/TheResources.vue';
 export default {
   components: {
     TheHeader,
-    TheResources,
-  },
-  data() {
-    return {
-      title: 'RememberMe',
-    };
-  },
+    TheResources
+  }
 };
 </script>
 
@@ -33,10 +28,5 @@ html {
 
 body {
   margin: 0;
-}
-#btn-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
 }
 </style>
