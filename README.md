@@ -32,3 +32,19 @@ This repository will hold all the follow along exercises as well as the assignme
 ### Section 9 - Component deep dive
 
 ![Summary of section 9](./Assets/Screenshots/S9Summary.png)
+
+### Section 10 - Course project - Learning Resources app
+
+when providing arrays to child components:
+
+- use array methods that manipulate the original array (ex. `array.shift()`, `array.splice()`) to make sure the provided arrays get updated
+
+### Section 11 - Forms
+
+#### Linking input to Vue
+
+v-model => two-way binding + automatically sets type to input type (type = number => this.value = type number)
+@input => live update
+ref=> using $refs.name for one-way binding => allways stores value as string
+
+#### V-model modifiers
